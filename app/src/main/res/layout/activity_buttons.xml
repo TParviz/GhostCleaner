@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="horizontal"
+    android:id="@+id/all_buttons_main"
+    android:background="@color/colorBackground1"
+    >
+
+    <Button
+        android:id="@+id/btn_not_rocket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_rocket4"
+        android:drawablePadding="1dp"
+        android:text="Speed"
+        android:layout_weight="1"
+        android:textSize="12sp"
+        android:background="@color/colorBackground1"
+        android:textColor="@color/white"
+        android:padding="8dp"
+        android:textAllCaps="false"
+        />
+
+
+    <Button
+        android:id="@+id/btn_not_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_battery"
+        android:textSize="12sp"
+        android:text="Battery"
+        android:background="@color/colorBackground1"
+        android:padding="8dp"
+        android:textAllCaps="false"
+        android:drawablePadding="8dp"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        />
+
+    <Button
+        android:id="@+id/btn_not_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ic_temperature"
+        android:textSize="12sp"
+        android:text="Cooler"
+        android:background="@color/colorBackground1"
+        android:textColor="@color/white"
+        android:padding="8dp"
+        android:drawablePadding="8dp"
+        android:textAllCaps="false"
+
+        />
+
+    <Button
+        android:id="@+id/btn_not_trash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ic_trash"
+        android:textSize="12sp"
+        android:text="Cleaning"
+        android:background="@color/colorBackground1"
+        android:textColor="@color/white"
+        android:padding="8dp"
+        android:textAllCaps="false"
+        android:drawablePadding="8dp"
+
+        />
+
+    <Button
+        android:id="@+id/btn_not_appman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ic_appmanager"
+        android:textSize="12sp"
+        android:text="Apps"
+        android:background="@color/colorBackground1"
+        android:textColor="@color/white"
+        android:padding="8dp"
+        android:textAllCaps="false"
+        android:drawablePadding="8dp"
+
+        />
+</LinearLayout>

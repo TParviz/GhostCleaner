@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingPrefix"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@+id/tv_no"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:lineSpacingExtra="7dp"
+        android:padding="4dp"
+        android:text="NO"
+        android:textColor="@color/colorGreen"
+        android:textSize="34sp"
+        app:key="no" />
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@+id/tv_ads"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_no"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-24dp"
+        android:lineSpacingExtra="5dp"
+        android:padding="4dp"
+        android:text="ADS"
+        android:textColor="@color/colorGreen"
+        android:textSize="24sp"
+        app:key="ad" />
+
+</merge>

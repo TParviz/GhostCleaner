@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_rocket"
+        android:icon="@drawable/ic_rocket"
+        android:title=""
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_battery"
+        android:icon="@drawable/ic_battery"
+        android:title=""
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_temperature"
+        android:icon="@drawable/ic_temperature"
+        android:title=""
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_trash"
+        android:icon="@drawable/ic_trash"
+        android:title=""
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_appmanager"
+        android:icon="@drawable/ic_appmanager"
+        android:title=""
+        app:showAsAction="always"/>
+</menu>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/battery_back"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@+id/tv_title"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Title"
+
+
+        android:textColor="#FADC86"
+        android:textSize="22sp"
+        app:key="titleBattery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        android:id="@+id/FrameProgress">
+
+        <ProgressBar
+            android:id="@+id/pb_main_progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:progress="70"
+            android:progressDrawable="@drawable/pg_drawable" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:id="@+id/tv_percent_pb"
+                android:layout_marginStart="100dp"
+
+                tools:text="70%"/>
+
+            <com.ghostcleaner.view.DTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:key="pbCharge"
+                tools:text="of your battery"/>
+
+
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
+
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@+id/tv_remain"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:text="Charging time remaining"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+
+        android:textSize="20sp"
+        app:key="batCharging"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FrameProgress" />
+
+    <TextView
+        android:id="@+id/tv_time_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@color/colorTeal"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_remain"
+        tools:text="9h 10m" />
+
+
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/inRelativeNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/card_banner"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time_main">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/normal_mode"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/iv_normal_mode"/>
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_normal_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="12dp"
+            app:key="batNormal"
+            android:textStyle="bold"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@+id/iv_normal_mode"
+            android:text="Normal"
+            android:textColor="#FF4656"
+            android:textSize="20sp" />
+
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_normal_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="normalDesc"
+
+            android:layout_below="@+id/tv_normal_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/iv_normal_mode"
+            android:text="Battery default settings."
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.ghostcleaner.view.DMaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_normal_desc"
+            android:layout_marginStart="140dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="2dp"
+            android:lineSpacingExtra="4dp"
+            android:minWidth="100dp"
+            android:layout_toEndOf="@+id/iv_normal_mode"
+            android:gravity="center"
+            android:id="@+id/btn_normal_click"
+            tools:text="Включить"
+            app:cornerRadius="10dp"
+            android:textAllCaps="false"
+            android:textColor="#FF4656"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:key="shieldButton"
+            android:layout_alignParentEnd="true"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/inRelativeUltra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/card_banner"
+        app:layout_constraintTop_toBottomOf="@+id/inRelativeNormal">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/ultra_mode"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/iv_ultra_mode"/>
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_ultra_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            app:key="batUltra"
+            android:textStyle="bold"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@+id/iv_ultra_mode"
+            android:text="Ultra"
+            android:textColor="#FADC86"
+            android:textSize="20sp" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_ultra_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="ultraDesc"
+
+            android:layout_below="@+id/tv_ultra_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/iv_ultra_mode"
+            android:text="Increased priority of energy saving."
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.ghostcleaner.view.DMaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_ultra_desc"
+            android:layout_marginStart="140dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="2dp"
+            android:lineSpacingExtra="4dp"
+            android:minWidth="100dp"
+            android:layout_toEndOf="@+id/iv_ultra_mode"
+            android:gravity="center"
+            android:id="@+id/btn_ultra_click"
+            tools:text="Включить"
+            app:cornerRadius="10dp"
+            android:textAllCaps="false"
+            android:textColor="#FADC86"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:key="shieldButton"
+            android:layout_alignParentEnd="true"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/inRelativeExtreme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/card_banner"
+        app:layout_constraintTop_toBottomOf="@+id/inRelativeUltra">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/extreme_mode"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/iv_extreme_mode"/>
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_extreme_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="12dp"
+            app:key="batExtreme"
+
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/iv_extreme_mode"
+            android:text="Extreme"
+            android:textColor="#32D87E"
+            android:textSize="18sp" />
+
+
+<!--        <com.ghostcleaner.view.DTextView-->
+<!--            android:id="@+id/tv_extreme_time"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginEnd="24dp"-->
+<!--            tools:text="30h 55m"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold" />-->
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_extreme_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="extremeDesc"
+
+            android:layout_below="@+id/tv_extreme_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/iv_extreme_mode"
+            android:text="All resources are dedicated to extending battery life."
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.ghostcleaner.view.DMaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_extreme_desc"
+            android:layout_marginStart="140dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="2dp"
+            android:lineSpacingExtra="4dp"
+            android:minWidth="100dp"
+            android:layout_toEndOf="@+id/iv_extreme_mode"
+            android:gravity="center"
+            android:id="@+id/btn_extreme_click"
+            tools:text="Включить"
+            app:cornerRadius="10dp"
+            android:textAllCaps="false"
+            android:textColor="#32D87E"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:key="shieldButton"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ads_banner_11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:adSize="LARGE_BANNER"
+        app:adUnitId="@string/ads_banner_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

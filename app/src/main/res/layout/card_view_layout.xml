@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_viewAppManager"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_margin="4dp"
+    card_view:cardBackgroundColor="#363847"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="2dp"
+    card_view:cardMaxElevation="5dp"
+    card_view:contentPadding="4dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="#363847"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageviewAppManager"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:padding="3dp"
+            app:srcCompat="@drawable/ic_android" />
+
+        <TextView
+            android:id="@+id/Apk_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Google"
+            android:textSize="18sp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/imageviewAppManager"
+            android:layout_toRightOf="@id/imageviewAppManager"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/white" />
+
+        <RelativeLayout
+            android:layout_marginTop="12dp"
+            android:id="@+id/lllinstalled_On"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Apk_Name"
+
+            android:layout_toEndOf="@id/imageviewAppManager"
+            android:layout_toRightOf="@id/imageviewAppManager"
+            android:layout_marginStart="24dp"
+
+            android:weightSum="4">
+
+            <com.ghostcleaner.view.DTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="1dp"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Установлено"
+                android:textColor="#3DA2A9"
+                android:textSize="12sp"
+                app:key="tvInstalled"
+                android:layout_marginLeft="18dp" />
+
+            <TextView
+                android:id="@+id/installed_On"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="100dp"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="20/10/1995"
+                android:textColor="#3DA2A9"
+                android:textSize="12sp"
+                android:layout_marginLeft="18dp" />
+
+
+<!--            <com.ghostcleaner.view.DTextView-->
+<!--                android:layout_width="115dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_gravity="end"-->
+<!--                android:layout_marginLeft="3dp"-->
+<!--                android:layout_marginRight="60dp"-->
+<!--                android:ellipsize="end"-->
+<!--                android:fontFamily="sans-serif-condensed"-->
+<!--                android:gravity="center"-->
+<!--                app:key="tvUpdated"-->
+<!--                android:text="Обновлено"-->
+<!--                android:textColor="#3DA2A9"-->
+<!--                android:textSize="12sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/last_Updated_Text"-->
+<!--                android:layout_width="115dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_gravity="end"-->
+
+<!--                android:ellipsize="end"-->
+<!--                android:fontFamily="sans-serif-condensed"-->
+<!--                android:gravity="center"-->
+<!--                android:text="20/11/2020"-->
+<!--                android:textColor="#3DA2A9"-->
+<!--                android:textSize="12sp" />-->
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lllinstalled_On"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/imageviewAppManager"
+            android:layout_toRightOf="@+id/imageviewAppManager"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:weightSum="2">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <com.ghostcleaner.view.DMaterialButton
+                    android:id="@+id/buttontv_OpenApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    app:key="btnOpenApp"
+
+                    tools:text="Открыть"
+                    android:textAllCaps="false"
+                    android:textColor="#FADC86"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.ghostcleaner.view.DMaterialButton
+                    android:id="@+id/buttontv_OpenAppDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    tools:text="Настройки"
+
+                    android:textAllCaps="false"
+                    android:textColor="#FADC86"
+                    android:textSize="16sp"
+                    app:key="btnAppDetails"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="18dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/no_ads">
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_disable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            fontPath="font/14606.ttf"
+            android:lineSpacingExtra="6dp"
+            android:text="TURN ON"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            app:key="adDisable" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_all_ads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_disable"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-16dp"
+            fontPath="font/14606.ttf"
+            android:lineSpacingExtra="14dp"
+            android:maxLines="1"
+            android:text="REAL-TIME"
+            android:textColor="@color/colorAccent"
+            android:textSize="48sp"
+            app:key="adAll" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_from_app"
+            fontPath="font/14606.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_all_ads"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-20dp"
+            android:lineSpacingExtra="6dp"
+            android:text="PROTECTION"
+            android:textColor="@android:color/white"
+            android:textSize="42sp"
+            app:key="adFrom" />
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="48dp"-->
+        <!--            android:layout_below="@id/tv_from_app"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:src="@drawable/image_banner"-->
+        <!--            android:id="@+id/includingBanner"/>-->
+        <RelativeLayout
+            android:layout_marginTop="32dp"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_from_app"
+            android:id="@+id/inRelative"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/no_banner">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rocketicon"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:id="@+id/iv_rocket"
+                />
+
+            <com.ghostcleaner.view.DTextView
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:text="Increase Productivity"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                fontPath="font/14606.ttf"
+                android:id="@+id/tv_rocket"
+                app:key="adNow"
+                />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/shieldicon"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_below="@+id/iv_rocket"
+                android:id="@+id/iv_shield"
+
+                />
+            <com.ghostcleaner.view.DTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="60dp"
+                fontPath="font/14606.ttf"
+                android:textSize="14sp"
+                android:layout_below="@+id/tv_rocket"
+                android:text="24/7 full protection"
+
+                android:id="@+id/tv_shield"
+                app:key="adNPrice"
+                />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/batteryicon"
+                android:layout_below="@+id/iv_shield"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:id="@+id/iv_battery"
+
+                />
+            <com.ghostcleaner.view.DTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="60dp"
+                fontPath="font/14606.ttf"
+                android:textSize="14sp"
+                android:text="Optimize Battery"
+                android:layout_below="@+id/tv_shield"
+                android:layout_marginBottom="24dp"
+                android:id="@+id/tv_optimize"
+                app:key="adFree" />
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fl_old_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_forever"
+            android:layout_marginStart="40dp">
+
+        </FrameLayout>
+
+
+        <com.ghostcleaner.view.DMaterialButton
+            android:id="@+id/btn_disable_1"
+            fontPath="font/14606.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_below="@+id/inRelative"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:lineSpacingExtra="5dp"
+            android:minWidth="244dp"
+            android:text="Activate"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            app:backgroundTint="#54bdc3"
+            app:cornerRadius="6dp"
+            app:key="btnDisable"
+            />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_forever"
+            fontPath="font/14606.ttf"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_disable_1"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toStartOf="@+id/tv_cost"
+            android:text="3 days of trial period, then per week"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            app:key="adPhone" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_cost"
+            fontPath="font/14606.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_disable_1"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            app:key="adOPrice"
+            tools:text="9.99$" />
+
+
+    </RelativeLayout>
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/ib_close"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="end"-->
+<!--        android:layout_marginEnd="7dp"-->
+<!--        android:background="@drawable/circle_close"-->
+<!--        android:foreground="?android:attr/selectableItemBackgroundBorderless"-->
+<!--        android:padding="11dp"-->
+<!--        android:src="@drawable/ic_close" />-->
+
+</FrameLayout>

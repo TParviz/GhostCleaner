@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@id/tv_title"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Title"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.ghostcleaner.view.RadarLayout
+        android:id="@+id/rl"
+        android:layout_width="@dimen/radar_size"
+        android:layout_height="@dimen/radar_size"
+        android:layout_marginTop="32dp"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorBackground"
+        app:color="@color/colorTeal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@+id/tv_scanning"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Scanning..."
+        android:textColor="@color/colorTeal"
+        android:textSize="22sp"
+        app:key="scanning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl" />
+
+    <TextView
+        android:id="@+id/tv_line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ellipsize="marquee"
+        android:lineSpacingExtra="3dp"
+        android:paddingStart="13dp"
+        android:paddingEnd="13dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_scanning"
+        tools:text="• Data/UserData/UserData/UserData/User/0/com.zgoogle.android.backuptransport" />
+
+    <TextView
+        android:id="@+id/tv_line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="marquee"
+        android:lineSpacingExtra="3dp"
+        android:paddingStart="13dp"
+        android:paddingEnd="13dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_line1"
+        tools:text="• Data/User/0/com.zgoogle.android.backuptransport" />
+
+    <TextView
+        android:id="@+id/tv_line3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="marquee"
+        android:lineSpacingExtra="3dp"
+        android:paddingStart="13dp"
+        android:paddingEnd="13dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_line2"
+        tools:text="• Data/User/0/com.zgoogle.android.backuptransport" />
+
+    <TextView
+        android:id="@+id/tv_line4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="marquee"
+        android:lineSpacingExtra="3dp"
+        android:paddingStart="13dp"
+        android:paddingEnd="13dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_line3"
+        tools:text="• Data/User/0/com.zgoogle.android.backuptransport" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ads_banner_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        app:adSize="LARGE_BANNER"
+        app:adUnitId="@string/ads_banner_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

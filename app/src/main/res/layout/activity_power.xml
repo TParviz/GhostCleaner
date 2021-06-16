@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/tv_title"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="Title"
+        android:textColor="#FADC86"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/pb_outer"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        app:cpb_background_progressbar_color="@color/colorDarkGray"
+        app:cpb_background_progressbar_width="11dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progressbar_color="@color/colorTeal"
+        app:cpb_progressbar_width="11dp"
+        app:cpb_round_border="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/pb_inner"
+        android:layout_width="212dp"
+        android:layout_height="212dp"
+        android:layout_gravity="center"
+        app:cpb_background_progressbar_color="@color/colorDarkGray"
+        app:cpb_background_progressbar_width="2dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progressbar_color="@color/colorTeal"
+        app:cpb_progressbar_width="2dp"
+        app:cpb_round_border="false"
+        app:layout_constraintBottom_toBottomOf="@+id/pb_outer"
+        app:layout_constraintEnd_toEndOf="@+id/pb_outer"
+        app:layout_constraintStart_toStartOf="@+id/pb_outer"
+        app:layout_constraintTop_toTopOf="@+id/pb_outer" />
+
+    <TextView
+        android:id="@+id/tv_percent"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="4dp"
+        android:text="Add 5h 10m"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pb_outer"
+        app:layout_constraintEnd_toEndOf="@+id/pb_outer"
+        app:layout_constraintStart_toStartOf="@+id/pb_outer"
+        app:layout_constraintTop_toTopOf="@+id/pb_outer" />
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@+id/tv_up"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="3dp"
+        android:text="Extended Battery Up"
+        android:textColor="@color/colorTeal"
+        android:textSize="18sp"
+        app:key="powExtended"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pb_outer" />
+
+    <com.ghostcleaner.view.DMaterialButton
+        android:id="@+id/btn_apply"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="4dp"
+        android:minWidth="153dp"
+        android:text="Apply"
+        android:textAllCaps="false"
+        android:textColor="@color/colorBackground"
+        android:textSize="22sp"
+        app:backgroundTint="@color/colorTeal"
+        app:cornerRadius="6dp"
+        app:key="btnApply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_up" />
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@+id/tv_scanning"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/power_scanning_top"
+        android:lineSpacingExtra="4dp"
+        android:text="Scanning..."
+        android:textColor="@color/colorTeal"
+        android:textSize="22sp"
+        android:visibility="invisible"
+        app:key="scanning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pb_outer" />
+
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:id="@+id/scroll_view_1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_scanning"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/tv_title">-->
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_apply"
+        android:id="@+id/scroll_view_1">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:paddingStart="13dp"
+            android:paddingEnd="13dp"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_apply"
+            tools:text="• Limit brightness upto 80%" />
+
+        <TextView
+            android:id="@+id/tv_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:paddingStart="13dp"
+            android:paddingEnd="13dp"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text1"
+            tools:text="• Decrease device performance" />
+
+        <TextView
+            android:id="@+id/tv_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:paddingStart="13dp"
+            android:paddingEnd="13dp"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text2"
+            tools:text="• Close all battery consuming apps" />
+
+        <TextView
+            android:id="@+id/tv_text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:paddingStart="13dp"
+            android:paddingEnd="13dp"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text3"
+            tools:text="• Close system services like Bluetooth, Screen\nRotation, Sync etc." />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ads_banner_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        app:adSize="LARGE_BANNER"
+        app:adUnitId="@string/ads_banner_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll_view_1"
+        app:layout_constraintVertical_bias="0.982" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

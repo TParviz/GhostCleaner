@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:layout_width="324dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/no_ads">
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_disable"
+            fontPath="font/SFUIDisplay-Bold.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:lineSpacingExtra="6dp"
+            android:text="DISABLE"
+            android:textColor="@android:color/white"
+            android:textSize="31sp"
+            app:key="adDisable" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_all_ads"
+            fontPath="font/SFUIDisplay-Bold.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_disable"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-24dp"
+            android:lineSpacingExtra="14dp"
+            android:maxLines="1"
+            android:text="ALL ADS"
+            android:textColor="@color/colorAccent"
+            android:textSize="50sp"
+            app:key="adAll" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_from_app"
+            fontPath="font/SFUIDisplay-Bold.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_all_ads"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-20dp"
+            android:lineSpacingExtra="6dp"
+            android:text="FROM APP"
+            android:textColor="@android:color/white"
+            android:textSize="31sp"
+            app:key="adFrom" />
+
+<!--        <com.ghostcleaner.view.DTextView-->
+<!--            android:id="@+id/tv_forever"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/tv_from_app"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:lineSpacingExtra="3dp"-->
+<!--            android:text="*forever for this phone"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:textSize="13sp"-->
+<!--            app:key="adPhone" />-->
+
+        <FrameLayout
+            android:id="@+id/fl_old_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_forever"
+            android:layout_marginStart="40dp">
+
+<!--            <com.ghostcleaner.view.DTextView-->
+<!--                fontPath="font/SFUIDisplay-Bold.ttf"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:lineSpacingExtra="12dp"-->
+<!--                android:text="10$"-->
+<!--                android:textColor="#803DA2A9"-->
+<!--                android:textSize="64sp"-->
+<!--                app:key="adOPrice" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:src="@drawable/ic_line" />-->
+
+        </FrameLayout>
+
+<!--        <com.ghostcleaner.view.DTextView-->
+<!--            android:id="@+id/tv_now"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/fl_old_price"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginTop="-12dp"-->
+<!--            android:lineSpacingExtra="5dp"-->
+<!--            android:text="now"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:textSize="24sp"-->
+<!--            app:key="adNow" />-->
+
+<!--        <com.ghostcleaner.view.DTextView-->
+<!--            android:id="@+id/tv_new_price"-->
+<!--            fontPath="font/SFUIDisplay-Bold.ttf"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/tv_now"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:lineSpacingExtra="12dp"-->
+<!--            android:text="9.99$"-->
+<!--            android:textColor="@color/colorGreen"-->
+<!--            android:textSize="64sp"-->
+<!--            app:key="adNPrice" />-->
+
+<!--        <com.ghostcleaner.view.DTextView-->
+<!--            android:id="@+id/tv_time"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/tv_new_price"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginTop="-12dp"-->
+<!--            android:lineSpacingExtra="9dp"-->
+<!--            android:text="00:00:00"-->
+<!--            android:textColor="@color/colorAccent"-->
+<!--            android:textSize="48sp" />-->
+
+<!--        <com.ghostcleaner.view.DMaterialButton-->
+<!--            android:id="@+id/btn_disable"-->
+<!--            fontPath="font/SFUIDisplay-Bold.ttf"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="64dp"-->
+<!--            android:layout_below="@+id/tv_time"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:lineSpacingExtra="5dp"-->
+<!--            android:minWidth="244dp"-->
+<!--            android:text="Disable Ads"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="#3B3E50"-->
+<!--            android:textSize="24sp"-->
+<!--            app:backgroundTint="@color/colorGreen"-->
+<!--            app:cornerRadius="6dp"-->
+<!--            app:key="btnDisable" />-->
+
+    </RelativeLayout>
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/ib_close"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="end"-->
+<!--        android:layout_marginEnd="7dp"-->
+<!--        android:background="@drawable/circle_close"-->
+<!--        android:foreground="?android:attr/selectableItemBackgroundBorderless"-->
+<!--        android:padding="11dp"-->
+<!--        android:src="@drawable/ic_close" />-->
+
+</FrameLayout>

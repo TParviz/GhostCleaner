@@ -1,0 +1,94 @@
+key,en
+sizeB,B
+sizeKb,KB
+sizeMb,MB
+sizeGb,GB
+sizeTb,TB
+sizePb,PB
+hours,h
+minutes,m
+titleBooster,Charge Booster
+titleBattery,Battery Saver
+titleNormal,Normal Power Saving Mode
+titleUltra,Ultra Power Saving Mode
+titleExtreme,Extreme Power Saving Mode
+titleCooler,CPU Cooler
+titleJunk,Jank Cleaner
+btnOptimize,Optimize
+btnOptimized,Optimized
+btnApply,Apply
+btnCool,Cool down
+btnCooled,Cooled
+btnHome,Home
+btnClean,Clean
+btnDisable,Activate
+btnBack,Back to the cleaner
+btnLater,Not now
+boostStorage,Storage
+boostOptimizing,Optimizing...
+boostFound,Found
+boostProc,Processes Running
+batCharging,Charging time remaining
+batNormal,Normal
+batUltra,Ultra
+batExtreme,Extreme
+powAdd,Add <arg>
+powExtended,Extended Battery Up
+powOpt1,• Limit brightness up to <arg>%
+powOpt2,• Disable device screen rotation
+powOpt3,• Close all battery consuming apps
+powOpt4,• Close system services like <arg> etc.
+coolGood,CPU Temperature is good
+coolLarge,CPU Temperature is large
+coolOverheat,Overheat
+coolNormal,NORMAL
+junkText1,Memory<br>Cache
+junkText2,Temporary<br>Files
+junkText3,Residual<br>Files
+junkText4,System<br>Junk
+junkClear,CRYSTAL CLEAR
+adDisable,TURN ON
+adAll,REAL-TIME
+adFrom,PROTECTION
+adPhone,3 days of trial period then per week
+adOPrice,9.99$
+adNow,Increase Productivity
+adNPrice,24/7 full protection
+adFree,Optimize Battery
+adForever,*disable ads forever
+adDisabled,Ads disabled
+no,NO
+ad,ADS
+scanning,Scanning...
+clockRemaining,<arg> remaining
+notText,Clean junk files to boost your battery.
+subTitleDone,Follow these steps to fully protect your phone.
+shieldTitle,Protection is required!
+shieldDesc,Turn on real-time protection and optimization.
+shieldButton,Turn on
+cleanTitle,Clean junk files
+cleanDesc,Delete all junk files from your device.
+cleanButton,Clean
+boostTitle,Battery boost
+boostDesc,Boost your battery by optimizing CPU working.
+boostButton,Boost
+batteryTitle,Optimize battery usage
+batteryDesc,Battery is too hot. Cool down it now.
+batteryButton,Optimize
+coolTitle,Cool down you battery
+coolDesc,Cool down your phone temperature.
+coolButton,Cool
+titleAppManager,App Manager
+normalDesc,Battery default settings.
+ultraDesc,Increased priority of energy saving.
+extremeDesc,All resources are dedicated to extending battery life.
+btnOpenApp,Open App
+btnAppDetails,App Details
+pbCharge,of your battery
+tvInstalled,Installed
+subscribeBanner,Get the full version without ads
+titleMenu,Menu
+textGetVip,Get VIP status
+textContact,Connect with us
+textShare,Share
+textRate,Rate us

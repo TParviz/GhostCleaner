@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <!--    <com.ghostcleaner.view.DTextView-->
+    <!--        android:id="@+id/tv_title"-->
+    <!--        fontPath="font/SFUIDisplay-Bold.ttf"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:lineSpacingExtra="4dp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:text="Title"-->
+    <!--        android:textColor="@color/colorAccent"-->
+    <!--        android:textSize="28sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <com.ghostcleaner.view.NoAdsLayout
+        android:id="@id/nal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/pb_outer"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="20dp"
+        app:cpb_background_progressbar_color="#03A9F4"
+        app:cpb_background_progressbar_width="11dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progressbar_color="@color/colorTeal"
+        app:cpb_progressbar_width="11dp"
+        app:cpb_round_border="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/pb_inner"
+        android:layout_width="212dp"
+
+        android:layout_height="212dp"
+        app:cpb_background_progressbar_color="#03A9F4"
+        app:cpb_background_progressbar_width="2dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progressbar_color="@color/colorTeal"
+        app:cpb_progressbar_width="2dp"
+        app:cpb_round_border="false"
+        app:layout_constraintBottom_toBottomOf="@+id/pb_outer"
+        app:layout_constraintEnd_toEndOf="@+id/pb_outer"
+        app:layout_constraintStart_toStartOf="@+id/pb_outer"
+        app:layout_constraintTop_toTopOf="@+id/pb_outer" />
+
+    <ImageView
+        android:id="@+id/iv_temperature"
+        android:layout_width="84dp"
+        android:layout_height="118dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/broom2"
+        app:layout_constraintBottom_toBottomOf="@+id/pb_outer"
+        app:layout_constraintEnd_toEndOf="@+id/pb_outer"
+        app:layout_constraintStart_toStartOf="@+id/pb_outer"
+        app:layout_constraintTop_toTopOf="@+id/pb_outer" />
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@+id/tv_title"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Title"
+        android:textColor="#03A9F4"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pb_outer"/>
+
+
+    <View
+        android:id="@+id/some_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#03A9F4"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/some_line">
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/leftcolumn"
+                android:background="@color/white">
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_battery"
+                    android:text="Battery12"
+                    android:background="@drawable/gradient_shape"
+                    android:textColor="#03A9F4"
+                    android:textSize="12sp"
+                    android:shadowRadius="12dp"
+
+                    />
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_shape"
+                    android:layout_marginStart="16dp"
+                    android:textColor="#03A9F4"
+                    android:drawableTop="@drawable/ic_battery"
+                    android:text="Battery12"
+                    android:textSize="12sp"
+                    />
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_shape"
+                    android:layout_marginStart="16dp"
+                    android:textColor="#03A9F4"
+                    android:drawableTop="@drawable/ic_battery"
+                    android:text="Battery12"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:id="@+id/averagecolumn"
+                android:background="@color/white"
+                >
+
+                <Button
+                    android:id="@+id/btn4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_appmanager"
+                    android:background="@drawable/gradient_shape"
+                    android:textColor="#03A9F4"
+                    android:text="AppManag"
+                    android:textSize="12sp"
+                    />
+                <Button
+                    android:id="@+id/btn5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_shape"
+                    android:textColor="#03A9F4"
+                    android:drawableTop="@drawable/ic_appmanager"
+                    android:layout_marginStart="16dp"
+                    android:text="AppManag"
+                    android:textSize="12sp"
+                    />
+
+                <Button
+                    android:id="@+id/btn6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/gradient_shape"
+                    android:textColor="#03A9F4"
+                    android:drawableTop="@drawable/ic_appmanager"
+                    android:text="AppManag"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_view">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cl_done"
+    android:orientation="vertical">
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Title"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="12dp"
+
+        android:src="@drawable/optimizcompl" />
+
+
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ads_banner_2"
+        android:layout_width="280dp"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:adSize="LARGE_BANNER"
+        app:adUnitId="@string/ads_banner_2"
+
+         />
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@+id/tv_steps"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
+
+        app:key="subTitleDone"
+        android:layout_marginTop="12dp"
+        android:lineSpacingExtra="3dp"
+        android:text="Follow these steps to fully protect your phone."
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/inRelative"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/card_banner"
+        app:layout_constraintTop_toBottomOf="@+id/tv_steps">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/shield_button_red"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/shield_card_iv2"/>
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_card_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            app:key="shieldTitle"
+
+
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/shield_card_iv2"
+            android:text="Protection is required!"
+            android:textColor="#FF4656"
+            android:textSize="20sp" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_card_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="shieldDesc"
+
+            android:layout_below="@+id/tv_card_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/shield_card_iv2"
+            android:text="Turn on real-time protection and optimization."
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.ghostcleaner.view.DMaterialButton
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tv_card_desc"
+            android:layout_marginStart="120dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="2dp"
+            android:lineSpacingExtra="4dp"
+            android:minWidth="100dp"
+            android:layout_toEndOf="@+id/shield_card_iv2"
+            android:gravity="center"
+            android:id="@+id/button_jump_subscribe"
+            android:text="Включить"
+            app:cornerRadius="6dp"
+            android:textAllCaps="false"
+            android:visibility="visible"
+            android:textColor="#FF4656"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:key="shieldButton"
+            android:layout_alignParentEnd="true"
+
+
+            app:strokeColor="#84F8FF"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/inRelative2"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/card_banner"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inRelative">
+
+        <ImageView
+            android:id="@+id/clean_card_iv2"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/clean_button_red" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_card_title_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/clean_card_iv2"
+            android:text="Clean junk files"
+            android:textColor="@color/colorRed2"
+            app:key="cleanTitle"
+
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_card_desc_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="cleanDesc"
+
+            android:layout_below="@+id/tv_card_title_1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+
+            android:layout_toEndOf="@+id/clean_card_iv2"
+            android:text="Delete all junk files from your device."
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.ghostcleaner.view.DMaterialButton
+            android:id="@+id/button_jump_clean"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tv_card_desc_1"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:lineSpacingExtra="4dp"
+            android:minWidth="100dp"
+            android:layout_toEndOf="@+id/clean_card_iv2"
+            android:gravity="center"
+            app:cornerRadius="6dp"
+            android:text="Очистить"
+            android:visibility="visible"
+            android:textColor="#FF4656"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:strokeColor="#84F8FF"
+            android:textAllCaps="false"
+            android:onClick="cleanJump"
+            app:key="cleanButton"
+            android:layout_alignParentEnd="true"
+
+            />
+
+    </RelativeLayout>
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ads_banner_3"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        app:adSize="LARGE_BANNER"
+        app:adUnitId="@string/ads_banner_3"
+/>
+
+    <RelativeLayout
+        android:id="@+id/inRelative3"
+        android:layout_width="360dp"
+
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/card_banner"
+>
+
+        <ImageView
+            android:id="@+id/rocket_card_iv2"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/rocket_button_red1" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_card_title_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            app:key="boostTitle"
+
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/rocket_card_iv2"
+            android:text="Battery boost"
+            android:textColor="#FF4656"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_card_desc_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="boostDesc"
+
+            android:layout_below="@+id/tv_card_title_2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+
+            android:layout_toEndOf="@+id/rocket_card_iv2"
+            android:text="Boost your battery by optimizing CPU working."
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.ghostcleaner.view.DMaterialButton
+            android:id="@+id/button_jump_boost"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tv_card_desc_2"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="120dp"
+            android:lineSpacingExtra="4dp"
+            android:minWidth="100dp"
+            android:layout_toEndOf="@+id/rocket_card_iv2"
+            android:gravity="center"
+            android:text="Ускорить"
+            android:visibility="visible"
+            app:cornerRadius="6dp"
+            android:textAllCaps="false"
+            android:textColor="#FF4656"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:strokeColor="#84F8FF"
+            app:key="boostButton"
+            android:layout_alignParentEnd="true"
+
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/inRelative4"
+        android:layout_width="360dp"
+
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/card_banner"
+>
+
+        <ImageView
+            android:id="@+id/battery_card_iv2"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/battery_button_red" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_card_title_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="batteryTitle"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/battery_card_iv2"
+            android:text="Optimize battery usage"
+            android:textColor="#FF4656"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_card_desc_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="batteryDesc"
+            android:layout_marginEnd="8dp"
+
+            android:layout_below="@+id/tv_card_title_3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/battery_card_iv2"
+            android:text="Battery is too hot. Cool down it now"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.ghostcleaner.view.DMaterialButton
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tv_card_desc_3"
+            android:layout_marginStart="120dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/battery_card_iv2"
+            android:lineSpacingExtra="4dp"
+            android:minWidth="100dp"
+            android:gravity="center"
+            app:cornerRadius="6dp"
+            android:visibility="visible"
+            android:text="Улучшить"
+            android:textColor="#FF4656"
+            android:textAllCaps="false"
+            android:id="@+id/button_jump_battery"
+            app:key="batteryButton"
+
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:strokeColor="#84F8FF"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/inRelative5"
+        android:layout_width="360dp"
+
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/card_banner"
+>
+
+        <ImageView
+            android:id="@+id/temperature_card_iv2"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/cool_button_red" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_card_title_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            app:key="coolTitle"
+
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/temperature_card_iv2"
+            android:text="Cool down you battery"
+            android:textColor="#FF4656"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.ghostcleaner.view.DTextView
+            android:id="@+id/tv_card_desc_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="coolDesc"
+            android:layout_marginEnd="8dp"
+
+            android:layout_below="@+id/tv_card_title_4"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/temperature_card_iv2"
+            android:text="Cool down your phone temperature"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.ghostcleaner.view.DMaterialButton
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tv_card_desc_4"
+            android:layout_marginStart="120dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/temperature_card_iv2"
+            android:lineSpacingExtra="4dp"
+            android:minWidth="100dp"
+            android:gravity="center"
+            app:cornerRadius="6dp"
+            android:text="Охладить"
+            android:textColor="#FF4656"
+            android:textAllCaps="false"
+            android:id="@+id/button_jump_temperature"
+            app:key="coolButton"
+
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:strokeColor="#84F8FF"/>
+
+    </RelativeLayout>
+
+
+
+
+
+    <com.ghostcleaner.view.DMaterialButton
+        android:id="@+id/btn_home"
+        android:layout_width="200dp"
+        android:layout_height="68dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Home"
+        android:textColor="@color/colorBackground"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+
+        app:key="btnHome"
+        app:backgroundTint="#FADC86"
+        app:cornerRadius="6dp"
+
+        />
+
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ads_banner_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+
+        app:adSize="LARGE_BANNER"
+        app:adUnitId="@string/ads_banner_4"
+ />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

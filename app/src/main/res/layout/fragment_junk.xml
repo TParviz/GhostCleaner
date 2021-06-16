@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cons_frag_junk"
+    tools:ignore="MissingPrefix">
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@+id/tv_title"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Title"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        app:key="titleJunk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.ghostcleaner.view.NoAdsLayout
+        android:id="@id/nal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/pb_outer"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="20dp"
+        app:cpb_background_progressbar_color="@color/colorDarkGray"
+        app:cpb_background_progressbar_width="11dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progressbar_color="@color/colorTeal"
+        app:cpb_progressbar_width="11dp"
+        app:cpb_round_border="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/pb_inner"
+        android:layout_width="212dp"
+        android:layout_height="212dp"
+        app:cpb_background_progressbar_color="@color/colorDarkGray"
+        app:cpb_background_progressbar_width="2dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progressbar_color="@color/colorTeal"
+        app:cpb_progressbar_width="2dp"
+        app:cpb_round_border="false"
+        app:layout_constraintBottom_toBottomOf="@+id/pb_outer"
+        app:layout_constraintEnd_toEndOf="@+id/pb_outer"
+        app:layout_constraintStart_toStartOf="@+id/pb_outer"
+        app:layout_constraintTop_toTopOf="@+id/pb_outer" />
+
+    <ImageView
+        android:id="@+id/iv_temperature"
+        android:layout_width="84dp"
+        android:layout_height="118dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/broom"
+        app:layout_constraintBottom_toBottomOf="@+id/pb_outer"
+        app:layout_constraintEnd_toEndOf="@+id/pb_outer"
+        app:layout_constraintStart_toStartOf="@+id/pb_outer"
+        app:layout_constraintTop_toTopOf="@+id/pb_outer" />
+
+    <TextView
+        android:id="@+id/tv_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="4dp"
+        android:text="0MB"
+        android:textColor="@color/colorRed"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pb_outer" />
+
+    <com.ghostcleaner.view.DMaterialButton
+        android:id="@+id/btn_clean"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="4dp"
+        android:minWidth="152dp"
+        android:text="Clean"
+        android:textAllCaps="false"
+        android:textColor="@color/colorBackground"
+        android:textSize="22sp"
+        app:backgroundTint="@color/colorRed"
+        app:cornerRadius="6dp"
+        app:key="btnClean"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_size" />
+
+    <com.ghostcleaner.view.DMaterialButton
+        android:id="@+id/btn_cleaned"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:lineSpacingExtra="4dp"
+        android:minWidth="160dp"
+        android:text="Clean"
+        android:textAllCaps="false"
+        android:textColor="@color/colorTeal"
+        android:textSize="22sp"
+        android:visibility="invisible"
+        app:cornerRadius="6dp"
+        app:key="btnClean"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_size"
+        app:strokeColor="@color/colorTeal"
+        app:strokeWidth="1dp" />
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@+id/tv_text1"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="2dp"
+        android:text="Memory\nCache"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        app:key="junkText1"
+        app:layout_constraintEnd_toStartOf="@+id/tv_text2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_clean" />
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@+id/tv_text2"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="2dp"
+        android:text="Temporary\nFiles"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        app:key="junkText2"
+        app:layout_constraintEnd_toStartOf="@+id/tv_text3"
+        app:layout_constraintStart_toEndOf="@+id/tv_text1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_clean" />
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@+id/tv_text3"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="2dp"
+        android:text="Residual\nFiles"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        app:key="junkText3"
+        app:layout_constraintEnd_toStartOf="@+id/tv_text4"
+        app:layout_constraintStart_toEndOf="@+id/tv_text2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_clean" />
+
+    <com.ghostcleaner.view.DTextView
+        android:id="@+id/tv_text4"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="2dp"
+        android:text="System\nJunk"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        app:key="junkText4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_text3"
+        app:layout_constraintTop_toBottomOf="@+id/btn_clean" />
+
+    <TextView
+        android:id="@+id/tv_value1"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="3dp"
+        android:text="0MB"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_text1"
+        app:layout_constraintStart_toStartOf="@+id/tv_text1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_text1" />
+
+    <TextView
+        android:id="@+id/tv_value2"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="3dp"
+        android:text="0MB"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_text2"
+        app:layout_constraintStart_toStartOf="@+id/tv_text2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_text2" />
+
+    <TextView
+        android:id="@+id/tv_value3"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="3dp"
+        android:text="0MB"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_text3"
+        app:layout_constraintStart_toStartOf="@+id/tv_text3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_text3" />
+
+    <TextView
+        android:id="@+id/tv_value4"
+        fontPath="font/SFUIDisplay-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="3dp"
+        android:text="0MB"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_text4"
+        app:layout_constraintStart_toStartOf="@+id/tv_text4"
+        app:layout_constraintTop_toBottomOf="@+id/tv_text4" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearButton"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_value3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        android:clickable="true"
+        android:background="@color/colorRed"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_monetization_on_24"
+            />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Get the full version without ads"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:gravity="start"
+            app:key="subscribeBanner"
+            android:textAllCaps="true"
+            />
+
+        <Button
+            android:id="@+id/btn_remove_banner"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/ic_baseline_clear_24"
+            />
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ads_banner_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:adSize="LARGE_BANNER"
+        app:adUnitId="@string/ads_banner_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:id="@+id/iv_broom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/broom"
+        app:layout_constraintBottom_toBottomOf="@+id/fl_broom"
+        app:layout_constraintEnd_toEndOf="@+id/fl_broom"
+        app:layout_constraintStart_toStartOf="@+id/fl_broom"
+        app:layout_constraintTop_toTopOf="@+id/fl_broom" />
+
+    <com.github.jorgecastillo.FillableLoader
+        android:id="@+id/fl_broom"
+        android:layout_width="114dp"
+        android:layout_height="160dp"
+        app:fl_clippingTransform="plain"
+        app:fl_fillColor="@color/colorTeal"
+        app:fl_fillDuration="1600"
+        app:fl_fillPercentage="100"
+        app:fl_originalHeight="160"
+        app:fl_originalWidth="114"
+        app:fl_strokeColor="@color/colorBackground"
+        app:fl_strokeDrawingDuration="0"
+        app:fl_strokeWidth="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_app"
+        fontPath="font/SFNS Display Regular.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:lineSpacingExtra="4dp"
+        android:text="@string/app_name"
+        android:textColor="#FADC86"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_broom"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

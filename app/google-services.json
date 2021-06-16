@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "671141417570",
+    "firebase_url": "https://ghost-cleaner-2.firebaseio.com",
+    "project_id": "ghost-cleaner-2",
+    "storage_bucket": "ghost-cleaner-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671141417570:android:825d8b240410dec188f73b",
+        "android_client_info": {
+          "package_name": "com.WhiteWolfStudio.GhostCleaner2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671141417570-ht9ggslvovtk8mpcp51cpeq8fmf1ol0g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-mzs7__a7pWNxuKmCHRgo9PiBPhvwcQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671141417570-ht9ggslvovtk8mpcp51cpeq8fmf1ol0g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-8957338923046618~3262584869"
+    }
+  ],
+  "configuration_version": "1"
+}

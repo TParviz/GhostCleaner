@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Ghost Cleaner</string>
+    <string name="ads_banner" translatable="false">ca-app-pub-8957338923046618/2671102045</string>
+    <string name="ads_banner_2" translatable="false">ca-app-pub-8957338923046618/5131711444</string>
+    <string name="ads_banner_3" translatable="false">ca-app-pub-8957338923046618/4643259306</string>
+    <string name="ads_banner_4" translatable="false">ca-app-pub-8957338923046618/9704014298</string>
+
+    <string name="ads_interstitial" translatable="false">ca-app-pub-8957338923046618/9783305301</string>
+    <string name="ads_interstitial_1" translatable="false">ca-app-pub-8957338923046618/8619847544</string>
+    <string name="ads_interstitial_3" translatable="false">ca-app-pub-8957338923046618/6303876634</string>
+
+    <string name="ads_rewarded" translatable="false">ca-app-pub-8957338923046618/2193138633 </string>
+    <!-- see https://android.googlesource.com/platform/frameworks/base/+/4f868ed/core/res/res/values/strings.xml -->
+    <string name="fileSizeSuffix"><xliff:g id="number" example="123">%1$s</xliff:g> <xliff:g id="unit" example="KB">%2$s</xliff:g></string>
+
+    <string name="app_manager">App Manager</string>
+    <string name="app_details">App Details</string>
+    <string name="open_app">Open App</string>
+    <string name="no_apps_on_your_device">No apps on your device</string>
+    <string name="updated_20_10_1995">Updated 20/10/1995</string>
+    <string name="installed_20_10_1995">Installed 20/10/1995</string>
+    <string name="No_Apps">No apps</string>
+
+
+
+</resources>
